@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
-const {chromium}=await import(process.env.PLAYWRIGHT_MODULE || '/home/hatch/workspace/makefun/browser/node_modules/playwright-core/index.mjs');
-const browser=await chromium.launch({headless:true,executablePath:process.env.CHROMIUM_PATH || '/home/hatch/.cache/ms-playwright/chromium-1255/chrome-linux64/chrome',args:['--no-sandbox']});
+import { chromium } from '/home/hatch/workspace/makefun/browser/node_modules/playwright-core/index.mjs';
+const browser=await chromium.launch({headless:true,executablePath:'/home/hatch/.cache/ms-playwright/chromium-1255/chrome-linux64/chrome',args:['--no-sandbox']});
 const page=await browser.newPage({viewport:{width:1280,height:720},hasTouch:true});
 const errors=[],requests=[];let loaded=false;
 page.on('pageerror',error=>errors.push(error.message));

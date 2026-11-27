@@ -1,8 +1,8 @@
-const {chromium}=await import(process.env.PLAYWRIGHT_MODULE || '/home/hatch/workspace/makefun/browser/node_modules/playwright-core/index.mjs');
+import { chromium } from '/home/hatch/workspace/makefun/browser/node_modules/playwright-core/index.mjs';
 import {mkdirSync,statSync} from 'node:fs';
 import assert from 'node:assert/strict';
 
-const browser=await chromium.launch({headless:true,executablePath:process.env.CHROMIUM_PATH || '/home/hatch/.cache/ms-playwright/chromium-1255/chrome-linux64/chrome',args:['--no-sandbox']});
+const browser=await chromium.launch({headless:true,executablePath:'/home/hatch/.cache/ms-playwright/chromium-1255/chrome-linux64/chrome',args:['--no-sandbox']});
 const page=await browser.newPage({viewport:{width:1280,height:720},deviceScaleFactor:1});
 const errors=[],remote=[],runtimeRequests=[];
 let loaded=false;

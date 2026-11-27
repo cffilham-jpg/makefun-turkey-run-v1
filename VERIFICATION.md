@@ -10,7 +10,7 @@ Verified in this build session on 2026-11-27 with Node 24.22.1 and headless Chro
 - `node tests/package.mjs`: PASS. Game has 8 files/directories and 36,761 bytes; index is 2,494 bytes; dossier is 489,405 bytes. Screenshots pass JPEG completeness, dimensions and size caps. Module syntax, internal static references, owner claim, dossier reconstruction and byte identity of the official vendor library pass.
 - GitHub repository created 2026-11-27T02:36:41Z, after opening. Public, homepage is the bounty URL, topic `makefun`.
 
-The browser checks accept `PLAYWRIGHT_MODULE` and `CHROMIUM_PATH` to select installed tooling; defaults point to this build machine's installations. Start `node serve.ts` before running them. `node tests/package.mjs` additionally compares the vendor file to the local competition kit.
+The browser checks use a static Playwright import and a literal Chromium executable path pointing to this build machine's installations. They read no environment values. Start `node serve.ts` before running them. `node tests/package.mjs` additionally compares the vendor file to the local competition kit.
 
 Codex session: `01a21adb-4da5-75e1-8da8-8700e886a4e6`.
 
