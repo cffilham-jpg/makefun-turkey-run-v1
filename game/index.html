@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#241f2e">
+  <title>Gobble Dash: The Great Escape</title>
+  <link rel="icon" href="data:,">
+  <style>
+    *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#201d2b;color:#fff2cb;font-family:Trebuchet MS,Arial,sans-serif}body{display:grid;place-items:center}#stage{position:relative;width:min(100vw,177.7778vh);aspect-ratio:16/9;box-shadow:0 0 80px #0008}canvas{width:100%;height:100%;display:block;touch-action:none}button{font:inherit;cursor:pointer;touch-action:none;-webkit-user-select:none;user-select:none}#controls{position:absolute;bottom:3%;right:2.5%;display:flex;gap:9px}#controls button{background:#292937de;border:1px solid #ffe4a857;border-bottom:4px solid #101822;border-radius:12px;color:#fff0ca;padding:12px 20px;font-size:clamp(10px,1.25vw,16px);font-weight:bold;min-width:85px}#controls button:active,#controls button.held{background:#c15b34;transform:translateY(2px)}#sound,#pause{position:absolute;top:3%;right:2.4%;background:#322b38;border:1px solid #f5d3a44d;border-radius:8px;color:#ffe3b3;padding:8px 12px;font-size:12px}#pause{right:8.7%}#action{position:absolute;left:7%;top:70%;width:29%;height:9%;border:0;border-bottom:5px solid #9b472d;border-radius:12px;background:#ffcc67;color:#382835;font-size:clamp(15px,2vw,26px);font-weight:900;box-shadow:0 6px 25px #2a1d2b40}#action:hover{background:#ffe39a}#action[hidden],#controls[hidden],#pause[hidden]{display:none}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+  </style>
+</head>
+<body>
+  <main id="stage" aria-label="Gobble Dash turkey escape game">
+    <canvas id="game" width="1280" height="720" aria-label="Turkey runner. Space to jump, down to duck, right to sprint." tabindex="0"></canvas>
+    <button id="action">LET’S GET OUT OF HERE →</button>
+    <button id="pause" hidden aria-label="Pause game">Ⅱ Pause</button>
+    <button id="sound" aria-label="Toggle sound">♫ Sound</button>
+    <div id="controls" hidden><button data-control="duck">↓ DUCK</button><button data-control="sprint">→ SPRINT</button><button data-control="jump">↑ JUMP</button></div>
+    <p id="status" class="sr" aria-live="polite">Title screen. Escape Thanksgiving dinner.</p>
+  </main>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
